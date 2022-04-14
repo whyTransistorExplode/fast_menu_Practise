@@ -12,8 +12,7 @@
 
 # misc
 .DS_Store
-
-.idea/
+.idea
 
 # umi
 .umi
