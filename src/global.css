@@ -1,0 +1,230 @@
+html, body, #root {
+  height: 100%;
+  font-family: "Comic Sans MS";
+
+}
+
+body {
+  margin: 0;
+}
+.groupOfdivImgs{
+  /*background-color: #FF6F04;*/
+  /*display: none;*/
+}
+
+.subject_orange{
+  color: #FF6F04;
+  font-family: Segoe UI Black;
+  font-style: italic;
+
+}
+.cursor_pointer{
+  cursor: pointer;
+}
+.tran{
+  transition: all 0.4s ease-out;
+}
+.opacity-0{
+  opacity: 0;
+}
+
+.selection_cursor{
+width: 25%!important;
+  display: none;
+  position: absolute!important;
+transform: translate(0,100%);
+opacity: 0;
+
+}
+.selection_cursor div{
+  height: 142px;
+padding: 17px 0;
+  align-items: center;
+}
+.selection_cursor div img{
+  width: 100%;
+
+  height: 100%;
+  background-color: rgba(102,105,98,0.5);
+}
+
+
+.bg-burger,.bg-sandwich,.bg-hotdog,.bg-pizza{
+  background: rgba(221,112,0,0.5) url("assets/img_burger.png") center no-repeat;
+  background-size: 90%!important;
+  margin: 5px 0;
+  transition: all 0.5s!important;
+}
+.bg-pizza{
+  background: rgba(38, 154, 221, 0.5) url("assets/img_pizza.png") center no-repeat!important;
+  background-size: 90%!important;
+}
+.bg-sandwich{
+  background: rgba(210, 221, 21, 0.5) url("assets/img_sandwich.png") center no-repeat!important;
+  background-size: 90%!important;
+}
+
+.bg-hotdog{
+  background: rgba(17, 221, 48, 0.5) url("assets/img_hotdog.png") center no-repeat!important;
+  background-size: 90%!important;
+}
+
+
+.carvedbutton{
+
+  cursor: default;
+  width: 100%!important;
+  height: 100%!important;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.92);
+  border: 2px solid rgba(31, 32, 31, 0.8);
+}
+.carvedbuttonOnPressed{
+  border: 2px solid rgba(220,221,219,1)!important;
+  background-color: rgba(0,0,0,0.7)!important;
+  color: #f7f7f7!important;
+}
+
+.centering-elements{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carvedbutton:active{
+  /*border: 2px solid rgba(220,221,219,1);*/
+  /*background-color: rgba(0,0,0,0.7);*/
+  /*color: #f7f7f7;*/
+
+}
+
+.responsive-square{
+  position: relative;
+  width: 15%;
+  opacity: 0.7;
+}
+.responsive-square:hover{
+  opacity: 0.9;
+  background-color: rgba(237,237,237,0.94);
+}
+
+
+.numberIndex{
+  width: 15%;
+  text-align: center;
+}
+
+.responsive-square:after{
+  content: '';
+  display: block;
+ padding-bottom: 100%;
+}
+.content-plus,.content-minus{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+ }
+
+/*left to right stick*/
+.content-plus:after,.content-minus:after{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: rgba(0,0,0,1);
+  width: 80%;
+  border-radius: 2px;
+  height: 20%;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+/*up to down stick*/
+.content-plus:before{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: rgba(0,0,0,1);
+  width: 20%;
+  border-radius: 2px;
+  height: 80%;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+.printbill-button{
+  transition: all 0.3s ease-out;
+  border: 1px solid rgba(63, 63, 63, 0.7);
+  border-top-left-radius: 0.15rem;
+  border-top-right-radius: 0.15rem;
+  margin-top: 0.5rem;
+
+}
+.printbill-button:hover{
+  border: 1px solid rgba(219,221,208,0.85);
+  background-color: rgba(50,50,50,0.83);
+  color: #FFf;
+  font-weight: bold;
+}
+
+.border-right-dotted{
+ border-right: 4px dotted #686767!important;
+}
+
+.border-bottom-solid{
+  border-bottom: 1px solid #2c2b2b;
+}
+.border-bottom-dashed{
+  border-bottom: 4px dashed rgba(44, 43, 43, 0.73);
+  margin: 1rem 0;
+}
+.border-top-dashed{
+  border-top: 4px dashed rgba(44, 43, 43, 0.73);
+  margin: 1rem 0;
+}
+
+.printbill-relative-div
+{
+  position: relative;
+  overflow: hidden;
+  /*visibility: hidden;*/
+transform: scale(0.34,1);
+  transition: height 2s;
+
+}
+
+@keyframes animcheck {
+  from{
+transform: scale(0.34,1) translate(0,0);
+  }
+  15%{
+    transform: scale(0.34,1) translate(0,-34px);
+  }
+  30%{transform: scale(1) translate(0,-34px)}
+  45%{transform: translate(0,0) scale(1)}
+  60%{transform: scale(0.34,1) translate(0,0);}
+  75%{transform: scale(0.34,1) translate(0,-34px);}
+  90%{transform: scale(1) translate(0,-34px);}
+100%{transform: translate(0,0);}
+}
+
+.printbill-absolute-div
+{
+  transition: all 2s ease;
+width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}
